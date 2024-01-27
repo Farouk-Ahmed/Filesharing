@@ -53,5 +53,13 @@ This project is built using asp.net core.
 - Font-Awesome
 
 
+## Peek from the workshop
 
+![1st](https://github.com/AhmedIbrahim-tech/Filesharing/blob/master/Files/screenshort/Home.jpg)
+
+![2nd](https://github.com/AhmedIbrahim-tech/Filesharing/blob/master/Files/screenshort/Browse.jpg)
+
+![3rd](https://github.com/AhmedIbrahim-tech/Filesharing/blob/master/Files/screenshort/Contact.jpg)
+
+![4th](https://github.com/AhmedIbrahim-tech/Filesharing/blob/master/Files/screenshort/Login.jpg)
 
