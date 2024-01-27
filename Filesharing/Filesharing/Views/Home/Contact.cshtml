@@ -1,0 +1,108 @@
+﻿@model ContactViewModal
+@{
+    ViewData["Title"] = "Contact";
+}
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+            <strong> @TempData["Message"] </strong>
+    </div>
+}
+
+
+	<!-- Start Page Header area -->
+	<div id="mu-page-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mu-page-header-area">
+						<h1 class="mu-page-header-title">Contact us</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Page Header area -->
+
+	<!-- Start Breadcrumb -->
+	<div id="mu-breadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<nav aria-label="breadcrumb" role="navigation">
+					  <ol class="breadcrumb mu-breadcrumb">
+					    <li class="breadcrumb-item"><a href="#">Home</a></li>
+					    <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+					  </ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Breadcrumb -->
+
+<!-- Start Contact -->
+<section id="mu-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-contact-area">
+                    <!-- Title -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mu-title">
+                                <h2>Say Hello!</h2>
+                                @* <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p> *@
+                            </div>
+                        </div>
+                    </div>
+                        <!-- Start Contact Content -->
+                    <div class="mu-contact-content">
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="mu-contact-form-area">
+                                    <div id="form-messages"></div>
+                                    <form id="contact" method="post" class="mu-contact-form" asp-action="Contact" >
+
+                                        <div class="form-group">  
+                                            <span class="fa fa-user mu-contact-icon"></span>              
+                                            <input type="text" asp-for="Name" class="form-control" placeholder="Name" id="name" name="name" required>
+                                            <span asp-validation-for="Name" ></span>
+                                        </div>
+
+                                        <div class="form-group">  
+                                            <span class="fa fa-envelope mu-contact-icon"></span>              
+                                            <input type="email" asp-for="Email" class="form-control" placeholder="Enter Email" id="email" name="email" required>
+                                            <span asp-validation-for="Email" ></span>
+                                        </div>    
+
+                                        <div class="form-group"> 
+                                            <span class="fa fa-folder-open-o mu-contact-icon"></span>                
+                                            <input type="text" asp-for="Subject" class="form-control" placeholder="Your Subject" id="subject" name="subject" required>
+                                            <span asp-validation-for="Subject" ></span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <span class="fa fa-pencil-square-o mu-contact-icon"></span> 
+                                            <textarea asp-for="Message" class="form-control" placeholder="Message" id="message" name="message" required></textarea>
+                                            <span asp-validation-for="Message" ></span>
+                                        </div>
+                                        <button type="submit" class="mu-send-msg-btn"><span>Send Message</span></button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End Contact Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact -->
+
+
+
